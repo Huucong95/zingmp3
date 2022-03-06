@@ -267,10 +267,11 @@ header {
     z-index: 7;
 }
 .slide {
-    margin: 36px 46px;
+    margin: 10px 46px;
     position: relative;
     padding-bottom: 30px;
     display: flex;
+    margin-bottom: 50px;
 }
 .slide:hover  .button-slider {
     opacity: 1;

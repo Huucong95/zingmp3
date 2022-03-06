@@ -3,11 +3,9 @@ const $$ = document.querySelectorAll.bind(document);
 
 
 
-    var  sliders = $$('.slide-item')
-
+        // xử lý silder 
     function next() {
         var  sliders = $$('.slide-item'), i=0, slider = $('.slide-item')
-
         switch (slider.className) {
             case 'slide-item slide-item__c1':
                 sliders[i].classList.replace('slide-item__c1','slide-item__c4');i++
@@ -75,7 +73,4 @@ function back() {
 }
 
 
-var auto = setInterval(next,5000)
-function abc(){
-    clearInterval(auto)
-}
+var autoSlider = setInterval(next,5000)
