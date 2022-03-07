@@ -20,7 +20,7 @@
                 </div>
                 <ul class="sidebar-navbar-menu">
                     <li class="sidebar-navbar-item">
-                        <a href="#"><ion-icon name="albums-outline" class="icon-navbar"></ion-icon>Cá Nhân</a>
+                        <a href="#mymusic"><ion-icon name="albums-outline" class="icon-navbar"></ion-icon>Cá Nhân</a>
                     </li>
                     <li class="sidebar-navbar-item active">
                         <a href="#"><ion-icon name="disc-outline" class="icon-navbar"></ion-icon>Khám Phá</a>
@@ -123,362 +123,458 @@
                             </div>
                         </div>
                     </header>
-                    <div class="slide">
-                        <div class="row " style="margin: 0 ;">
-                            <div class="slider">
-                                <div class="button-slider button-slider-back" onclick="next()">
-                                    <ion-icon name="chevron-back-outline"></ion-icon>
+                    <div class="panes">
+                        <div class="personal">
+                            <div class="personal-cover">
+                                <img src="./img/tải xuống.jpg" alt="" class="personal-avatar" />
+                                <span class="personal-name">
+                                    ZTBee
+                                </span>
+                            </div>
+                            <div class="personal-control">
+                                <div class="personal-navbar">
+                                    <ul class="personal-navbar__list">
+                                        <li class="personal-navbar__item active">TỔNG QUAN</li>
+                                        <li class="personal-navbar__item">BÀI HÁT</li>
+                                        <li class="personal-navbar__item">PLAYLIST</li>
+                                        <li class="personal-navbar__item">PODCAST</li>
+                                        <li class="personal-navbar__item">...</li>
+                                    </ul>
                                 </div>
-                                <div class="button-slider button-slider-forward" onclick="back()">
-                                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                            </div>
+                            <div class="personal-container">
+                                <div class="song-wrapper">
+                                    <h3 class="song-wrapper__name">Bài Hát</h3>
+                                    <div class="song-wrapper__right">
+                                        <a href="" class="all">TẤT CẢ<ion-icon name="chevron-forward-outline" class="all-icon"></ion-icon></a>
+                                        <div class="btn"><ion-icon class="btn-per" name="cloud-upload-outline"></ion-icon>tải lên</div>
+                                        <div class="btn btn-play"><ion-icon class="btn-per" name="play"></ion-icon>Phát Tất Cả</div>
+                                    </div>
                                 </div>
+                                <div class="song-container">
+                                    <div class="song-slider">
+                                        <img src="./img/mymusic/1.jpg" alt="">
+                                    </div>
+                                    <ul class="song-playlist">
+                                        <li class="song-playlist__item">
+                                            <img src="./img/mymusic/1.jpg" alt="" class="song-img">
+                                            <span class="song-name">Người Yêu Tôi Lạnh Lùng Săt Đá</span>
 
-                            </div>
-                            <div class="slide-item slide-item__c1">
-                                <a href="" class="slide-item__link">
-                                    <img src="./img/slide/cfc2e81c9e925d1b3dde3bd4a8a51ee8.jpg" alt="" class="slide-item__img" />
-                                </a>
-                            </div>
-
-                            <div class="slide-item slide-item__c2">
-                                <a href="" class="slide-item__link">
-                                    <img src="./img/slide/ae04f1517501f604f212e8f7a482d7fb.jpg" alt="" class="slide-item__img" />
-                                </a>
-                            </div>
-
-                            <div class="slide-item slide-item__c3">
-                                <a href="" class="slide-item__link">
-                                    <img src="./img/slide/f2095753a4f677fb826a084f483c1ab2.jpg" alt="" class="slide-item__img" />
-                                </a>
-                            </div>
-
-                            <div class="slide-item slide-item__c4">
-                                <a href="" class="slide-item__link">
-                                    <img src="./img/slide/s.jpg" alt="" class="slide-item__img" />
-                                </a>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="content">
-                        <div class="playlist">
-                            <h3 class="playlist-tittle">
-                                Lựa Chọn Hôm Nay
-                            </h3>
-                            <div class="row">
-                                <div class="col l-2-4">
-                                    <div class="playlist-item">
-                                        <a href="" class="playlist-item__link">
-                                            <div class="playlist-item__img" style="background-image: url('./img/today/76e99b8c00bfa177f0d617ba83e46695.webp');"></div>
-                                            <span class="playlist-item__name">
-                                                V-Weekend
-                                            </span>
-                                        </a>
-                                        <p class="playlist-item__desc">
-                                            Những lựa chọn đầy năng lượng và vui vẻ dành cho ngày cuối tuần của bạn
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col l-2-4">
-                                    <div class="playlist-item">
-                                        <a href="" class="playlist-item__link">
-                                            <div class="playlist-item__img" style="background-image: url('./img/today/ebaf0c3424c62e6575c10741eebabd23.jpg');"></div>
-                                            <span class="playlist-item__name">
-                                                Pop Old Style
-                                            </span>
-                                        </a>
-                                        <p class="playlist-item__desc">
-                                            Pop mang âm hưởng những thập niên xưa nhưng vẫn hút tai bất ngờ
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col l-2-4">
-                                    <div class="playlist-item">
-                                        <a href="" class="playlist-item__link">
-                                            <div class="playlist-item__img" style="background-image: url('./img/today/e.jpg');"></div>
-                                            <span class="playlist-item__name">
-                                                GlobalX
-                                            </span>
-                                        </a>
-                                        <p class="playlist-item__desc">
-                                            Những giai điệu dẫn đầu thời đại mới
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col l-2-4">
-                                    <div class="playlist-item">
-                                        <a href="" class="playlist-item__link">
-                                            <div class="playlist-item__img" style="background-image: url('./img/today/a.jpg');"></div>
-                                            <span class="playlist-item__name">
-                                                K-Pop Perfect All-Kill
-                                            </span>
-                                        </a>
-                                        <p class="playlist-item__desc">
-                                            TaeYeon giành được PAK đầu tiên của 2022 cùng 'INVU'. Đây là Thành tích cao nhất mà một ca khúc K-Pop có thể đạt được tại Hàn Quốc
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col l-2-4">
-                                    <div class="playlist-item">
-                                        <a href="" class="playlist-item__link">
-                                            <div class="playlist-item__img" style="background-image: url('./img/today/b.jpg');"></div>
-                                            <span class="playlist-item__name">
-                                                Anime Now
-                                            </span>
-                                        </a>
-                                        <p class="playlist-item__desc">
-                                            Nhạc Anime mới nhất ở thời điểm hiện tại có ngay tại đây
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="playlist">
-                            <h3 class="playlist-tittle">
-                                XONE's CORNER
-                            </h3>
-                            <div class="row">
-                                <div class="col l-2-4">
-                                    <div class="playlist-item">
-                                        <a href="" class="playlist-item__link">
-                                            <div class="playlist-item__img" style="background-image: url('./img/xconer/1.jpg');"></div>
-                                            <span class="playlist-item__name">
-                                                BAND HITs
-                                            </span>
-                                        </a>
-                                        <p class="playlist-item__desc">
-                                            Những BAN NHẠC HUYỀN THOẠI mọi người đều nghe
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col l-2-4">
-                                    <div class="playlist-item">
-                                        <a href="" class="playlist-item__link">
-                                            <div class="playlist-item__img" style="background-image: url('./img/xconer/2.jpg');"></div>
-                                            <span class="playlist-item__name">
-                                                Hot 100 độ XONE
-                                            </span>
-                                        </a>
-                                        <p class="playlist-item__desc">
-                                            VPop Hot nhất tuần 05.03
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col l-2-4">
-                                    <div class="playlist-item">
-                                        <a href="" class="playlist-item__link">
-                                            <div class="playlist-item__img" style="background-image: url('./img/xconer/3.jpg');"></div>
-                                            <span class="playlist-item__name">
-                                                Asia Tune - ACOUSTIC
-                                            </span>
-                                        </a>
-                                        <p class="playlist-item__desc">
-                                            Mộc mạc giai điệu Acoustic châu Á: Thịnh Suy, Monstar, IU...
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col l-2-4">
-                                    <div class="playlist-item">
-                                        <a href="" class="playlist-item__link">
-                                            <div class="playlist-item__img" style="background-image: url('./img/xconer/4.jpg');"></div>
-                                            <span class="playlist-item__name">
-                                                Daily XONE's Picks
-                                            </span>
-                                        </a>
-                                        <p class="playlist-item__desc">
-                                            APINK, Justin Bieber, AMEE....
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col l-2-4">
-                                    <div class="playlist-item">
-                                        <a href="" class="playlist-item__link">
-                                            <div class="playlist-item__img" style="background-image: url('./img/xconer/5.jpg');"></div>
-                                            <span class="playlist-item__name">
-                                                XONE x ROCK Việt
-                                            </span>
-                                        </a>
-                                        <p class="playlist-item__desc">
-                                            XONE đồng hành cùng Rock Việt
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="playlist">
-                            <h3 class="playlist-tittle">
-                                RADIO Nổi Bật
-                            </h3>
-                            <div class="row">
-                                <div class="col l-1-4">
-                                    <div class="playlist-item">
-                                        <a href="" class="playlist-item__link">
-                                            <div class="playlist-item__img radio" style="background-image: url('./img/radio/1.jpg');"></div>
-                                        </a>
-                                        <span class="playlist-item__name radio-name">
-                                            XONE Radio
-                                        </span>
-                                        <p class="playlist-item__count">
-                                            785 đang nghe
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col l-1-4">
-                                    <div class="playlist-item">
-                                        <a href="" class="playlist-item__link">
-                                            <div class="playlist-item__img radio" style="background-image: url('./img/radio/2.jpg');"></div>
-                                        </a>
-                                        <span class="playlist-item__name radio-name">
-                                            XONE Radio
-                                        </span>
-                                        <p class="playlist-item__count">
-                                            7285 đang nghe
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col l-1-4">
-                                    <div class="playlist-item">
-                                        <a href="" class="playlist-item__link">
-                                            <div class="playlist-item__img radio" style="background-image: url('./img/radio/3.jpg')"></div>
-                                        </a>
-                                        <span class="playlist-item__name radio-name">
-                                            XONE Radio
-                                        </span>
-                                        <p class="playlist-item__count">
-                                            3785 đang nghe
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col l-1-4">
-                                    <div class="playlist-item">
-                                        <a href="" class="playlist-item__link">
-                                            <div class="playlist-item__img radio" style="background-image: url('./img/radio/4.jpg');"></div>
-                                        </a>
-                                        <span class="playlist-item__name radio-name">
-                                            XONE Radio
-                                        </span>
-                                        <p class="playlist-item__count">
-                                            185 đang nghe
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col l-1-4">
-                                    <div class="playlist-item">
-                                        <a href="" class="playlist-item__link">
-                                            <div class="playlist-item__img radio" style="background-image: url('./img/radio/5.jpg');"></div>
-                                        </a>
-                                        <span class="playlist-item__name radio-name">
-                                            XONE Radio
-                                        </span>
-                                        <p class="playlist-item__count">
-                                            1785 đang nghe
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col l-1-4">
-                                    <div class="playlist-item">
-                                        <a href="" class="playlist-item__link">
-                                            <div class="playlist-item__img radio" style="background-image: url('./img/radio/6.jpg')"></div>
-                                        </a>
-                                        <span class="playlist-item__name radio-name">
-                                            XONE Radio
-                                        </span>
-                                        <p class="playlist-item__count">
-                                            1225 đang nghe
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col l-1-4">
-                                    <div class="playlist-item">
-                                        <a href="" class="playlist-item__link">
-                                            <div class="playlist-item__img radio" style="background-image: url('./img/radio/7.jpg');"></div>
-                                        </a>
-                                        <span class="playlist-item__name radio-name">
-                                            XONE Radio
-                                        </span>
-                                        <p class="playlist-item__count">
-                                            8785 đang nghe
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="playlist">
-                            <h3 class="playlist-tittle">
-                                Nhạc Mới Mỗi Ngày
-                            </h3>
-                            <div class="row">
-                                <div class="col l-2-4">
-                                    <div class="playlist-item">
-                                        <a href="" class="playlist-item__link">
-                                            <div class="playlist-item__img" style="background-image: url('./img/musicnew/1.jpg');"></div>
-                                            <span class="playlist-item__name">
-                                                V-Pop Tháng 3/2022
-                                            </span>
-                                        </a>
-                                        <p class="playlist-item__desc">
-                                            Những BAN NHẠC HUYỀN THOẠI mọi người đều nghe
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col l-2-4">
-                                    <div class="playlist-item">
-                                        <a href="" class="playlist-item__link">
-                                            <div class="playlist-item__img" style="background-image: url('./img/musicnew/2.jpg');"></div>
-                                            <span class="playlist-item__name">
-                                                US-UK Tháng 3/2022
-                                            </span>
-                                        </a>
-                                        <p class="playlist-item__desc">
-                                            VPop Hot nhất tuần 05.03
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col l-2-4">
-                                    <div class="playlist-item">
-                                        <a href="" class="playlist-item__link">
-                                            <div class="playlist-item__img" style="background-image: url('./img/musicnew/3.jpg');"></div>
-                                            <span class="playlist-item__name">
-                                                K-Pop Tháng 3/2022
-                                            </span>
-                                        </a>
-                                        <p class="playlist-item__desc">
-                                            Mộc mạc giai điệu Acoustic châu Á: Thịnh Suy, Monstar, IU...
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col l-2-4">
-                                    <div class="playlist-item">
-                                        <a href="" class="playlist-item__link">
-                                            <div class="playlist-item__img" style="background-image: url('./img/musicnew/4.jpg');"></div>
-                                            <span class="playlist-item__name">
-                                                C-Pop Tháng 3/2022
-                                            </span>
-                                        </a>
-                                        <p class="playlist-item__desc">
-                                            APINK, Justin Bieber, AMEE....
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col l-2-4">
-                                    <div class="playlist-item">
-                                        <a href="" class="playlist-item__link">
-                                            <div class="playlist-item__img" style="background-image: url('./img/musicnew/5.jpg');"></div>
-                                            <span class="playlist-item__name">
-                                                Indie Việt Tháng 3/2022
-                                            </span>
-                                        </a>
-                                        <p class="playlist-item__desc">
-                                            XONE đồng hành cùng Rock Việt
-                                        </p>
-                                    </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="panes actives" id="mymusic">
+                        <div class="discover">
+                            <div class="slide">
+                                <div class="row" style="margin: 0;">
+                                    <div class="slider">
+                                        <div class="button-slider button-slider-back" onclick="next()">
+                                            <ion-icon name="chevron-back-outline"></ion-icon>
+                                        </div>
+                                        <div class="button-slider button-slider-forward" onclick="back()">
+                                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                                        </div>
+                                    </div>
+                                    <div class="slide-item slide-item__c1">
+                                        <a href="" class="slide-item__link">
+                                            <img src="./img/slide/cfc2e81c9e925d1b3dde3bd4a8a51ee8.jpg" alt="" class="slide-item__img" />
+                                        </a>
+                                    </div>
+
+                                    <div class="slide-item slide-item__c2">
+                                        <a href="" class="slide-item__link">
+                                            <img src="./img/slide/ae04f1517501f604f212e8f7a482d7fb.jpg" alt="" class="slide-item__img" />
+                                        </a>
+                                    </div>
+
+                                    <div class="slide-item slide-item__c3">
+                                        <a href="" class="slide-item__link">
+                                            <img src="./img/slide/f2095753a4f677fb826a084f483c1ab2.jpg" alt="" class="slide-item__img" />
+                                        </a>
+                                    </div>
+
+                                    <div class="slide-item slide-item__c4">
+                                        <a href="" class="slide-item__link">
+                                            <img src="./img/slide/s.jpg" alt="" class="slide-item__img" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="playlist">
+                                    <h3 class="playlist-tittle">
+                                        Lựa Chọn Hôm Nay
+                                    </h3>
+                                    <div class="row">
+                                        <div class="col l-2-4">
+                                            <div class="playlist-item">
+                                                <a href="" class="playlist-item__link">
+                                                    <div class="img-container">
+                                                        <img class="playlist-item__img" src="./img/today/76e99b8c00bfa177f0d617ba83e46695.webp" alt="" />
+                                                    </div>
+                                                    <span class="playlist-item__name">
+                                                        V-Weekend
+                                                    </span>
+                                                </a>
+                                                <p class="playlist-item__desc">
+                                                    Những lựa chọn đầy năng lượng và vui vẻ dành cho ngày cuối tuần của bạn
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col l-2-4">
+                                            <div class="playlist-item">
+                                                <a href="" class="playlist-item__link">
+                                                    <div class="img-container">
+                                                        <img class="playlist-item__img" src="./img/today/ebaf0c3424c62e6575c10741eebabd23.jpg" alt="" />
+                                                    </div>
+                                                    <span class="playlist-item__name">
+                                                        Pop Old Style
+                                                    </span>
+                                                </a>
+                                                <p class="playlist-item__desc">
+                                                    Pop mang âm hưởng những thập niên xưa nhưng vẫn hút tai bất ngờ
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col l-2-4">
+                                            <div class="playlist-item">
+                                                <a href="" class="playlist-item__link">
+                                                    <div class="img-container">
+                                                        <img class="playlist-item__img" src="./img/today/e.jpg" alt="" />
+                                                    </div>
+                                                    <span class="playlist-item__name">
+                                                        GlobalX
+                                                    </span>
+                                                </a>
+                                                <p class="playlist-item__desc">
+                                                    Những giai điệu dẫn đầu thời đại mới
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col l-2-4">
+                                            <div class="playlist-item">
+                                                <a href="" class="playlist-item__link">
+                                                    <div class="img-container">
+                                                        <img class="playlist-item__img" src="./img/today/a.jpg" alt="" />
+                                                    </div>
+                                                    <span class="playlist-item__name">
+                                                        K-Pop Perfect All-Kill
+                                                    </span>
+                                                </a>
+                                                <p class="playlist-item__desc">
+                                                    TaeYeon giành được PAK đầu tiên của 2022 cùng 'INVU'. Đây là Thành tích cao nhất mà một ca khúc K-Pop có thể đạt được tại Hàn Quốc
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col l-2-4">
+                                            <div class="playlist-item">
+                                                <a href="" class="playlist-item__link">
+                                                    <div class="img-container">
+                                                        <img class="playlist-item__img" src="./img/today/b.jpg" alt="" />
+                                                    </div>
+                                                    <span class="playlist-item__name">
+                                                        Anime Now
+                                                    </span>
+                                                </a>
+                                                <p class="playlist-item__desc">
+                                                    Nhạc Anime mới nhất ở thời điểm hiện tại có ngay tại đây
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="playlist">
+                                    <h3 class="playlist-tittle">
+                                        XONE's CORNER
+                                    </h3>
+                                    <div class="row">
+                                        <div class="col l-2-4">
+                                            <div class="playlist-item">
+                                                <a href="" class="playlist-item__link">
+                                                    <div class="img-container">
+                                                        <img class="playlist-item__img" src="./img/xconer/1.jpg" alt="" />
+                                                    </div>
+                                                    <span class="playlist-item__name">
+                                                        BAND HITs
+                                                    </span>
+                                                </a>
+                                                <p class="playlist-item__desc">
+                                                    Những BAN NHẠC HUYỀN THOẠI mọi người đều nghe
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col l-2-4">
+                                            <div class="playlist-item">
+                                                <a href="" class="playlist-item__link">
+                                                    <div class="img-container">
+                                                        <img class="playlist-item__img" src="./img/xconer/2.jpg" alt="" />
+                                                    </div>
+                                                    <span class="playlist-item__name">
+                                                        Hot 100 độ XONE
+                                                    </span>
+                                                </a>
+                                                <p class="playlist-item__desc">
+                                                    VPop Hot nhất tuần 05.03
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col l-2-4">
+                                            <div class="playlist-item">
+                                                <a href="" class="playlist-item__link">
+                                                    <div class="img-container">
+                                                        <img class="playlist-item__img" src="./img/xconer/3.jpg" alt="" />
+                                                    </div>
+                                                    <span class="playlist-item__name">
+                                                        Asia Tune - ACOUSTIC
+                                                    </span>
+                                                </a>
+                                                <p class="playlist-item__desc">
+                                                    Mộc mạc giai điệu Acoustic châu Á: Thịnh Suy, Monstar, IU...
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col l-2-4">
+                                            <div class="playlist-item">
+                                                <a href="" class="playlist-item__link">
+                                                    <div class="img-container">
+                                                        <img class="playlist-item__img" src="./img/xconer/4.jpg" alt="" />
+                                                    </div>
+                                                    <span class="playlist-item__name">
+                                                        Daily XONE's Picks
+                                                    </span>
+                                                </a>
+                                                <p class="playlist-item__desc">
+                                                    APINK, Justin Bieber, AMEE....
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col l-2-4">
+                                            <div class="playlist-item">
+                                                <a href="" class="playlist-item__link">
+                                                    <div class="img-container">
+                                                        <img class="playlist-item__img" src="./img/xconer/5.jpg" alt="" />
+                                                    </div>
+                                                    <span class="playlist-item__name">
+                                                        XONE x ROCK Việt
+                                                    </span>
+                                                </a>
+                                                <p class="playlist-item__desc">
+                                                    XONE đồng hành cùng Rock Việt
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="playlist">
+                                    <h3 class="playlist-tittle">
+                                        RADIO Nổi Bật
+                                    </h3>
+                                    <div class="row">
+                                        <div class="col l-1-4">
+                                            <div class="playlist-item">
+                                                <a href="" class="playlist-item__link">
+                                                    <div class="img-container radio">
+                                                        <img class="playlist-item__img" src="./img/radio/1.jpg" alt="" />
+                                                    </div>
+                                                </a>
+                                                <span class="playlist-item__name radio-name">
+                                                    XONE Radio
+                                                </span>
+                                                <p class="playlist-item__count">
+                                                    785 đang nghe
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col l-1-4">
+                                            <div class="playlist-item">
+                                                <a href="" class="playlist-item__link">
+                                                    <div class="img-container radio">
+                                                        <img class="playlist-item__img" src="./img/radio/2.jpg" alt="" />
+                                                    </div>
+                                                </a>
+                                                <span class="playlist-item__name radio-name">
+                                                    XONE Radio
+                                                </span>
+                                                <p class="playlist-item__count">
+                                                    7285 đang nghe
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col l-1-4">
+                                            <div class="playlist-item">
+                                                <a href="" class="playlist-item__link">
+                                                    <div class="img-container radio">
+                                                        <img class="playlist-item__img" src="./img/radio/3.jpg" alt="" />
+                                                    </div>
+                                                </a>
+                                                <span class="playlist-item__name radio-name">
+                                                    XONE Radio
+                                                </span>
+                                                <p class="playlist-item__count">
+                                                    3785 đang nghe
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col l-1-4">
+                                            <div class="playlist-item">
+                                                <a href="" class="playlist-item__link">
+                                                    <div class="img-container radio">
+                                                        <img class="playlist-item__img" src="./img/radio/4.jpg" alt="" />
+                                                    </div>
+                                                </a>
+                                                <span class="playlist-item__name radio-name">
+                                                    XONE Radio
+                                                </span>
+                                                <p class="playlist-item__count">
+                                                    185 đang nghe
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col l-1-4">
+                                            <div class="playlist-item">
+                                                <a href="" class="playlist-item__link">
+                                                    <div class="img-container radio">
+                                                        <img class="playlist-item__img" src="./img/radio/5.jpg" alt="" />
+                                                    </div>
+                                                </a>
+                                                <span class="playlist-item__name radio-name">
+                                                    XONE Radio
+                                                </span>
+                                                <p class="playlist-item__count">
+                                                    1785 đang nghe
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col l-1-4">
+                                            <div class="playlist-item">
+                                                <a href="" class="playlist-item__link">
+                                                    <div class="img-container radio">
+                                                        <img class="playlist-item__img" src="./img/radio/6.jpg" alt="" />
+                                                    </div>
+                                                </a>
+                                                <span class="playlist-item__name radio-name">
+                                                    XONE Radio
+                                                </span>
+                                                <p class="playlist-item__count">
+                                                    1225 đang nghe
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col l-1-4">
+                                            <div class="playlist-item">
+                                                <a href="" class="playlist-item__link">
+                                                    <div class="img-container radio">
+                                                        <img class="playlist-item__img" src="./img/radio/7.jpg" alt="" />
+                                                    </div>
+                                                </a>
+                                                <span class="playlist-item__name radio-name">
+                                                    XONE Radio
+                                                </span>
+                                                <p class="playlist-item__count">
+                                                    8785 đang nghe
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="playlist">
+                                    <h3 class="playlist-tittle">
+                                        Nhạc Mới Mỗi Ngày
+                                    </h3>
+                                    <div class="row">
+                                        <div class="col l-2-4">
+                                            <div class="playlist-item">
+                                                <a href="" class="playlist-item__link">
+                                                    <div class="img-container">
+                                                        <img class="playlist-item__img" src="./img/musicnew/1.jpg" alt="" />
+                                                    </div>
+                                                    <span class="playlist-item__name">
+                                                        V-Pop Tháng 3/2022
+                                                    </span>
+                                                </a>
+                                                <p class="playlist-item__desc">
+                                                    Những BAN NHẠC HUYỀN THOẠI mọi người đều nghe
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col l-2-4">
+                                            <div class="playlist-item">
+                                                <a href="" class="playlist-item__link">
+                                                    <div class="img-container">
+                                                        <img class="playlist-item__img" src="./img/musicnew/2.jpg" alt="" />
+                                                    </div>
+                                                    <span class="playlist-item__name">
+                                                        US-UK Tháng 3/2022
+                                                    </span>
+                                                </a>
+                                                <p class="playlist-item__desc">
+                                                    VPop Hot nhất tuần 05.03
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col l-2-4">
+                                            <div class="playlist-item">
+                                                <a href="" class="playlist-item__link">
+                                                    <div class="img-container">
+                                                        <img class="playlist-item__img" src="./img/musicnew/3.jpg" alt="" />
+                                                    </div>
+                                                    <span class="playlist-item__name">
+                                                        K-Pop Tháng 3/2022
+                                                    </span>
+                                                </a>
+                                                <p class="playlist-item__desc">
+                                                    Mộc mạc giai điệu Acoustic châu Á: Thịnh Suy, Monstar, IU...
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col l-2-4">
+                                            <div class="playlist-item">
+                                                <a href="" class="playlist-item__link">
+                                                    <div class="img-container">
+                                                        <img class="playlist-item__img" src="./img/musicnew/4.jpg" alt="" />
+                                                    </div>
+                                                    <span class="playlist-item__name">
+                                                        C-Pop Tháng 3/2022
+                                                    </span>
+                                                </a>
+                                                <p class="playlist-item__desc">
+                                                    APINK, Justin Bieber, AMEE....
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col l-2-4">
+                                            <div class="playlist-item">
+                                                <a href="" class="playlist-item__link">
+                                                    <div class="img-container">
+                                                        <img class="playlist-item__img" src="./img/musicnew/5.jpg" alt="" />
+                                                    </div>
+                                                    <span class="playlist-item__name">
+                                                        Indie Việt Tháng 3/2022
+                                                    </span>
+                                                </a>
+                                                <p class="playlist-item__desc">
+                                                    XONE đồng hành cùng Rock Việt
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panes"></div>
+                    <div class="panes"></div>
+                    <div class="panes"></div>
                 </div>
             </div>
         </div>
+        <!-- Tab cá nhân -->
+
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         <script src="./js/script.js"></script>

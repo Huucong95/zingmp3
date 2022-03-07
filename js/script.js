@@ -74,3 +74,25 @@ function back() {
 
 
 var autoSlider = setInterval(next,5000)
+
+
+
+/// xử lý tab sidebar
+function controlSideBar () {
+        var menu = $('.sidebar-navbar-menu')
+        var tabs = menu.querySelectorAll('.sidebar-navbar-item')
+        var panes = $$('.panes')
+        
+        tabs.forEach((tab,index) => {
+                const pane = panes[index]
+                tab.onclick = function () {
+                $('.sidebar-navbar-item.active').classList.remove('active')
+                this.classList.add('active')
+                $('.panes.actives').classList.remove('actives')
+                pane.classList.add('actives')
+
+              }
+})
+}
+controlSideBar()
+// end tab sidebar
