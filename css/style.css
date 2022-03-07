@@ -228,6 +228,11 @@ header {
     border-radius: 50px;
     
 }
+.input-search::-moz-placeholder { 
+    color: #d7c8ee;
+    font-size: 1.4rem;
+    font-weight: 500;
+ }
 .header-right {
 
     justify-content: end;
