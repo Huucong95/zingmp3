@@ -219,7 +219,6 @@ const playList = {
         const _this =this
         const htmls = this.songs.map(function (song, index) {
                 
-                
            var  html= `
                         <div class="song-playlist__item">
                                 <div class="song-left">
@@ -455,7 +454,7 @@ const playList = {
         this.loadCurrentSong();
         this.scrollToActive()
         this.render();
-
+        // this.getDuration()
     },
 };
 playList.start();
