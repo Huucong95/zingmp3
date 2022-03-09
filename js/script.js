@@ -147,6 +147,8 @@ const volumeRange =$(".volume")
 const playListBar =$(".playlist-sidebar")
 const sideBarRight = $(".sidebar-right")
 const sbPlayList = $(".sr-playlist")
+const srPlayListItem =$(".song-playlist__item")
+
 //song
 const playList = {
     currentIndex: 0,
@@ -214,7 +216,7 @@ const playList = {
      
 
     render: function () {
-        
+        const _this =this
         const htmls = this.songs.map(function (song, index) {
                 
                 
@@ -236,15 +238,14 @@ const playList = {
                         </div>
 
                     `
-               
                 return html
                 
         })
         const playlist = this.songs.map(function (song, index) {
-                
+               
                 
             return `
-                         <div class="sr-playlist__item">
+                         <div class="sr-playlist__item ${index === _this.currentIndex ? 'active' : ''}" data-index="${index}">
                                          <img src="${song.imgage}" alt="" class="playlist__item-img" />
                                          <div class="playlist__item-info">
                                             <span class="playlist__item-name">${song.name}</span>
@@ -258,7 +259,7 @@ const playList = {
          })
         
         $(".song-playlist").innerHTML = htmls.join("");
-        $(".sr-playlist").innerHTML = playlist.join("");
+        sbPlayList.innerHTML = playlist.join("");
     },
    
     defineProperties: function () {
@@ -336,6 +337,8 @@ const playList = {
                 _this.nextSong();
             }
             audio.play();
+            _this.render()
+            _this.scrollToActive()
         };
         //khi prev về bài trc
         prevSongbtn.onclick = function () {
@@ -346,6 +349,9 @@ const playList = {
             }
 
             audio.play();
+            _this.render()
+            _this.scrollToActive()
+
         };
         //ramdom
         ramdomSongbtn.onclick = function () {
@@ -371,24 +377,42 @@ const playList = {
                 
             }else {
                 sideBarRight.style.transform= 'translateX(330px)'
+                playListBar.classList.remove('active')
                 _this.isOnSideBarR = false
             }
         }
         playListBar.onclick = function (event) {
             if(!_this.isOnSideBarR){
                 sideBarRight.style.transform= 'translateX(0)'
+                playListBar.classList.add('active')
                 _this.isOnSideBarR = true
             }else {
                 sideBarRight.style.transform= 'translateX(330px)'
+                playListBar.classList.remove('active')
+
                 _this.isOnSideBarR = false
             }
             event.stopPropagation()
             
         }
+        ///xu ly click item
+        sbPlayList.ondblclick = function (e) {
+            if(e.target.closest('.sr-playlist__item')){
+               _this.currentIndex = Number(e.target.closest('.sr-playlist__item').dataset.index)
+               _this.loadCurrentSong()
+               _this.render()
+               audio.play()
+            }
+        }
      
     },
     setCurrentVolume: function (){
             volumeRange = 80
+    },
+    scrollToActive: function(){
+        setTimeout(() => {
+            $('.sr-playlist__item.active').scrollIntoView()
+        }, 500);
     },
 
     loadCurrentSong: function () {
@@ -419,39 +443,13 @@ const playList = {
         this.currentIndex = newIndex;
         this.loadCurrentSong();
     },
-    getDuration(music) {
-        return new Promise(function (resolve) {
-          music.addEventListener("loadedmetadata", function () {
-            const time = formatTime(music.duration);
-    
-            resolve(time);
-          });
-        });
-        
-      },
     start: function () {
         this.defineProperties();
-        // this.formatSecondsAsTime()
         this.handelEvents();
         this.loadCurrentSong();
+        this.scrollToActive()
         this.render();
 
     },
 };
 playList.start();
-function formatTime(sec_num) {
-        let hours = Math.floor(sec_num / 3600);
-        let minutes = Math.floor((sec_num - hours * 3600) / 60);
-        let seconds = Math.floor(sec_num - hours * 3600 - minutes * 60);
-      
-        hours = hours < 10 ? (hours > 0 ? "0" + hours : 0) : hours;
-      
-        if (minutes < 10) {
-          minutes = "0" + minutes;
-        }
-        if (seconds < 10) {
-          seconds = "0" + seconds;
-        }
-        return (hours !== 0 ? hours + ":" : "") + minutes + ":" + seconds;
-      }
-      
