@@ -609,11 +609,8 @@ header {
     height: 90px;
     color: #fff;
     flex-direction: column;
-    width: 530px;
+    width: 40%;
 
-}
-.player-controls-right {
-    width: 397px;
 }
 .player-center-top >.ramdom-song.active {
     color: #5c127c;
@@ -661,11 +658,12 @@ header {
     font-size: 5rem;
     margin-right: 20px;
 }
+/* left  player */
 .player-controls-left{
     display: flex;
     align-items: center;
     height: 90px;
-    width: 397px;
+    width: 30%;
     justify-content: space-between;
 }
 .player-song-left{
@@ -699,4 +697,8 @@ header {
 }
 .song-like-icon{
     color: #5c127c;
+}
+/* right player */
+.player-controls-right {
+    width: 30%;
 }
