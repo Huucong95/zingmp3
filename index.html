@@ -91,6 +91,21 @@
                         <span class="sidebar-bottom-content">Tạo playlist mới</span>
                     </div>
                 </div>
+                <div class="sidebar-right">
+                    <div class="sr-header">
+                        <div class="sr-header-left">
+                            <h6 class="playlist-name active">Danh sách phát</h6>
+                            <h6 class="playlist-name ">Nghe gần đây</h6>
+                        </div>
+                        <div class="sr-header-right">
+                            <ion-icon name="alarm-outline" class="icon-srheader"></ion-icon>
+                            <ion-icon name="ellipsis-horizontal" class="icon-srheader"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="sr-playlist scroller" onclick="event.stopPropagation()">
+
+                    </div>
+                </div>
                 <div class="container">
                     <div class="grid">
                         <header>
@@ -570,7 +585,7 @@
                     </div>
                 </div>
             </div>
-            <div class="player-controls">
+            <div class="player-controls" onclick="event.stopPropagation()">
 
                             <div class="player-controls-left">
                                 <div class="player-song-left">
@@ -603,7 +618,12 @@
                                 </div>
                             </div>
                             <div class="player-controls-right">
-
+                                <ion-icon name="videocam-outline" class="icon-player-right"></ion-icon>
+                                <ion-icon name="mic-outline" class="icon-player-right"></ion-icon>
+                                <ion-icon name="tv-outline" class="icon-player-right"></ion-icon>
+                                <ion-icon name="volume-medium-outline" class="icon-player-right volume-icon"></ion-icon>
+                                <input id="volume" class="volume" type="range" value="80" step="1" min="0" max="100">
+                                <ion-icon name="reorder-four-outline" class="icon-player-right playlist-sidebar"></ion-icon>
                             </div>
                     </div>
              

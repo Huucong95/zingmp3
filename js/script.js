@@ -142,14 +142,18 @@ const ramdomSongbtn = $(".ramdom-song");
 const currentTimebtn = $(".current-time");
 const fullTimebtn = $(".full-time");
 const repeatBnt = $(".repeat-song");
-
-
+const volumeBtn = $(".volume-icon")
+const volumeRange =$(".volume")
+const playListBar =$(".playlist-sidebar")
+const sideBarRight = $(".sidebar-right")
+const sbPlayList = $(".sr-playlist")
 //song
 const playList = {
     currentIndex: 0,
     isPlaying: false,
     isRamdom: false,
     isRepeat: false,
+    isOnSideBarR: false,
     songs: [
         {
             name: "Chạy Về Nơi Phía Anh",
@@ -236,8 +240,25 @@ const playList = {
                 return html
                 
         })
+        const playlist = this.songs.map(function (song, index) {
+                
+                
+            return `
+                         <div class="sr-playlist__item">
+                                         <img src="${song.imgage}" alt="" class="playlist__item-img" />
+                                         <div class="playlist__item-info">
+                                            <span class="playlist__item-name">${song.name}</span>
+                                            <p class="playlist__item-singer-name">${song.singer}</p>
+                                         </div>
+                         </div>
+ 
+                     `
+        
+                 
+         })
         
         $(".song-playlist").innerHTML = htmls.join("");
+        $(".sr-playlist").innerHTML = playlist.join("");
     },
    
     defineProperties: function () {
@@ -290,6 +311,23 @@ const playList = {
                 const seekTime = (e.target.value * audio.duration) / 100;
                 audio.currentTime = seekTime;
             };
+            //xử lý khi tăng giảm âm lương
+            volumeRange.onchange =function(e) {
+                const mVolume = e.target.value/100 
+                audio.volume = mVolume
+                if(mVolume ===0){
+                    volumeBtn.setAttribute("name", "volume-mute-outline");
+                }
+                else if(mVolume<=.8) {
+                    volumeBtn.setAttribute("name" , "volume-medium-outline")
+                }else{
+                    volumeBtn.setAttribute("name","volume-high-outline")
+                }
+            }
+            volumeBtn.onclick = function(e){
+                
+            }
+
         //khi next bài hát
         nextSongbtn.onclick = function () {
             if (_this.isRamdom) {
@@ -327,6 +365,30 @@ const playList = {
                 nextSongbtn.click();
             }
         };
+        //xử lý playlist bar
+        document.onclick = function () {
+            if(!_this.isOnSideBarR){
+                
+            }else {
+                sideBarRight.style.transform= 'translateX(330px)'
+                _this.isOnSideBarR = false
+            }
+        }
+        playListBar.onclick = function (event) {
+            if(!_this.isOnSideBarR){
+                sideBarRight.style.transform= 'translateX(0)'
+                _this.isOnSideBarR = true
+            }else {
+                sideBarRight.style.transform= 'translateX(330px)'
+                _this.isOnSideBarR = false
+            }
+            event.stopPropagation()
+            
+        }
+     
+    },
+    setCurrentVolume: function (){
+            volumeRange = 80
     },
 
     loadCurrentSong: function () {
