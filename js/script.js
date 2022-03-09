@@ -246,10 +246,16 @@ const playList = {
                 
             return `
                          <div class="sr-playlist__item ${index === _this.currentIndex ? 'active' : ''}" data-index="${index}">
+                                         <div class="item-right">
                                          <img src="${song.imgage}" alt="" class="playlist__item-img" />
                                          <div class="playlist__item-info">
                                             <span class="playlist__item-name">${song.name}</span>
                                             <p class="playlist__item-singer-name">${song.singer}</p>
+                                         </div>
+                                         </div>
+                                         <div class="hover-item">
+                                            <ion-icon name="heart" class="hover-item-icon"></ion-icon>
+                                            <ion-icon name="ellipsis-horizontal" class="hover-item-icon"></ion-icon>
                                          </div>
                          </div>
  

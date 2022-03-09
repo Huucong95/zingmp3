@@ -228,11 +228,11 @@
 
 }
 .sr-playlist {
-    
     height: calc(100vh - 160px);
     margin-top: 70px;
     overflow-y: scroll;
     padding-bottom: 16px;
+    cursor: pointer;
 }
 .sr-playlist__item{
     display: flex;
@@ -241,6 +241,16 @@
     height: 56px;
     margin: 8px;
 }
+.sr-playlist__item:hover  {
+    background-color: rgba(255, 255, 255, 0.24);
+    border-radius: 5px;
+}
+.sr-playlist__item:hover  .hover-item {
+    display: block;
+}
+.sr-playlist__item:hover  .playlist__item-name {
+    width: 150px;
+}
 .sr-playlist__item:active {
     opacity: 0.7;
 }
@@ -248,7 +258,23 @@
     background-color: #5c127c;
     height: 56px;
     border-radius: 5px;
-
+}
+.item-right {
+ display: flex;
+ width: 80%;
+}
+.hover-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+    width: 20%;
+    display: none;
+}
+.hover-item-icon {
+    font-size: 1.4rem;
+    color: #fff;
+    margin: 0 4px;
 }
 
 .playlist__item-img{
@@ -270,7 +296,7 @@
     color: #fff;
     margin-bottom: 4px;
     white-space: nowrap; 
-    width: 250px;
+    width: 200px;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -800,6 +826,10 @@ header {
     font-size: 1.4rem;
     line-height: 1.8rem;
     font-weight: 500;
+    white-space: nowrap; 
+    width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .player-song-singer-name{
     color: hsla(0,0%,100%,0.5);
